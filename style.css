@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.spel{
+ position: absolute;
+ top: 10rem;
+ left: 50%;
+ transform: translate(-50%);
+ width: 660px;
+ height: 600px;
+ border: 1px solid white  ;
+ background-color: white;  
+ padding: 0.5rem;
+}
+
+.Veld{
+    background-color: white;
+    border: 2px solid red;
+    display:inline-block;
+    margin: 2px;
+    width: 80px;
+    height:80px;
+    padding: 2rem;
+}
+.Veld:hover{
+    background-color:  darkgrey;
+}
+
+.reset{
+    position: absolute;
+    top: 80vh;
+    left:50%;
+    transform: translate(-50%);
+    border: 1px solid black  ;
+    background-color: white; 
+    width: 5rem;
+    text-align: center;
+    cursor: pointer;
+}

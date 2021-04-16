@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vier Op Een Rij</title>
+    <style>
+        .exampleone:hover{background-color:  darkgrey;
+        }
+        .grid{
+            border: 1px solid;
+            height: 120px;
+            width: 20px;
+        }
+        a:hover div{
+             background-color: black;
+        }
+        div{
+            background-color: white;
+            border: 4px solid red;
+            display:inline-block;
+            width:100px;
+            height: 80px;
+        }
+    </style>
+    <script type="text/javascript">
+        let spelerindex = 1;
+        function veranderkleur(getal){
+            var hetelem = document.getElementById("div"+getal);
+            console.log(hetelem);
+            hetelem.style.backgroundColor = bepaalAchtergrondkleur();
+        }
+        function bepaalAchtergrondkleur(){
+            if(spelerindex == 0){
+                spelerindex = 1;
+                return 'yellow';
+            }else{
+                spelerindex = 0;
+                return 'red';
+            }
+        }
+        document.getElementById("Speler").innerHTML = spelerindex;
+    </script>
+</head>
+<body>
+    
+    <h1>viewport op een rij</h1>
+    <h3 class= "player -turn"></h3>
+        
+    <div class="exampleone" onclick="veranderkleur('1')" id=div1></div>
+    <div class="exampleone" onclick="veranderkleur('2')" id=div2></div>
+    <div class="exampleone" onclick="veranderkleur('3')" id=div3></div>
+    <div class="exampleone" onclick="veranderkleur('4')" id=div4></div> 
+    <br>
+    <div class="exampleone" onclick="veranderkleur('1')" id=div5></div>
+    <div class="exampleone" onclick="veranderkleur('2')" id=div6></div>
+    <div class="exampleone" onclick="veranderkleur('3')" id=div1></div>
+    <div class="exampleone" onclick="veranderkleur('4')" id=div2></div>
+    <br>
+    <div class="exampleone" onclick="veranderkleur('1')" id=div3></div>
+    <div class="exampleone" onclick="veranderkleur('2')" id=div4></div>
+    <div class="exampleone" onclick="veranderkleur('3')" id=div5></div>
+    <div class="exampleone" onclick="veranderkleur('4')" id=div6></div>
+    
+    
+ <script src="app.js"></script>
+</body>
+</html>
+
